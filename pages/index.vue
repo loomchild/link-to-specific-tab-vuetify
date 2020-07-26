@@ -1,11 +1,11 @@
 <template>
   <v-container>
-    <v-row>
-      <v-col cols="12" class="headline text-center mb-4">
+    <v-row class="mb-4">
+      <v-col cols="12" class="headline text-center">
         Linking to a Specific Tab
       </v-col>
     </v-row>
-    <v-row>
+    <v-row class="mb-4">
       <v-col cols="12" md="6" offset-md="3">
         <v-card>
           <v-tabs v-model="tab" background-color="grey lighten-4">
@@ -34,13 +34,31 @@
         </v-card>
       </v-col>
     </v-row>
+    <v-row>
+      <v-col cols="12" class="text-center">
+        Go to:
+        <v-btn to="/?tab=one" class="ml-4">
+          Tab One
+        </v-btn>
+        <v-btn to="/?tab=two" class="ml-4">
+          Tab Two
+        </v-btn>
+      </v-col>
+    </v-row>
   </v-container>
 </template>
 
 <script>
 export default {
-  data: () => ({
-    tab: null
-  })
+  computed: {
+    tab: {
+      set (tab) {
+        this.$router.replace({ query: { ...this.$route.query, tab } })
+      },
+      get () {
+        return this.$route.query.tab
+      }
+    }
+  }
 }
 </script>
