@@ -15,6 +15,9 @@
             <v-tab href="#two">
               Two
             </v-tab>
+          </v-tabs>
+
+          <v-tabs-items :value="tab">
             <v-tab-item value="one">
               <v-card-text>
                 This is ONE!<br>
@@ -27,7 +30,7 @@
                 2222222222
               </v-card-text>
             </v-tab-item>
-          </v-tabs>
+          </v-tabs-items>
         </v-card>
       </v-col>
     </v-row>
