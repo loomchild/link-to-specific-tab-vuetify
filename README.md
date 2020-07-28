@@ -2,7 +2,7 @@
 
 > A project demonstrating how to navigate to a specific tab in Vuetify.js and Nuxt.js 
 
-Read my related article on [Medium](...) to learn more.
+Read my related article on [Medium](https://medium.com/untitled-factory/linking-to-a-specific-tab-in-vuetify-js-d978525f2e1a) to learn more.
 
 ## Build Setup
 
