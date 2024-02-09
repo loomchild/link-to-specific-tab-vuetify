@@ -20,6 +20,8 @@ module.exports = {
       'error', {
         singleline: 16
       }
-    ]
+    ],
+    'vue/comment-directive': 0,
+    'vue/multi-word-component-names': 0,
   }
 }
